@@ -83,7 +83,8 @@ async def get_lat_lng(
 
     # the walrus operator := is a way to assign a value to a variable as part of an expression
     if features := data['features']:
-        lat, lng = features[0]['center']
+        lng, lat = features[0]['center']
+        debug(lat, lng)
         return {'lat': lat, 'lng': lng}
     else:
         raise ModelRetry('Could not find the location')

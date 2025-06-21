@@ -19,7 +19,7 @@ You'll see `(venv)` in your terminal prompt when it's active.
 ### 2. Install Packages
 
 ```bash
-pip install pydantic_ai
+pip install dotenv devtools pydantic-ai logfire openai supabase
 ```
 
 ### 3. Save Dependencies
@@ -47,3 +47,9 @@ pip install -r requirements.txt
 - Keep `requirements.txt` updated
 - You can name your env: `python -m venv myenv`
 - Upgrade pip: `python -m pip install --upgrade pip`
+- When you get SSL certificate validation errors during pip operations (like 'NoneType' object has no attribute 'get'), the most reliable solution is to reinstall pip using the official installer:
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+rm get-pip.py
+```
